@@ -158,17 +158,23 @@ def share_reels_to_stories(dry_run=False):
         print(f"Obteniendo Reels de la cuenta (ID: {user_id})...")
         reels = cl.user_clips(user_id, amount=20)
         
-        # Filtrar Reels no compartidos y del año actual
+        # Filtrar Reels no compartidos, del año actual y que no contengan palabras excluidas (eventos pasados)
         current_year = datetime.now().year
+        exclude_keywords = ["boulder beats", "boulderbeats", "liga", "evento", "clinica"]
         pending_reels = []
         for reel in reels:
             reel_id = str(getattr(reel, "pk", None) or getattr(reel, "id", None))
             reel_year = reel.taken_at.year if getattr(reel, "taken_at", None) else None
-            if reel_id not in shared_ids and reel_year == current_year:
+            
+            # Verificar si la publicación contiene palabras excluidas (eventos)
+            caption = (reel.caption_text or "").lower()
+            has_exclude_kw = any(kw in caption for kw in exclude_keywords)
+            
+            if reel_id not in shared_ids and reel_year == current_year and not has_exclude_kw:
                 pending_reels.append((reel_id, reel))
                 
         if not pending_reels:
-            print(f"No hay Reels nuevos de este año ({current_year}) pendientes por compartir.")
+            print(f"No hay Reels nuevos de este año ({current_year}) que califiquen para compartir.")
             return
             
         # Seleccionar el más antiguo de los pendientes (el último de la lista devuelta por Instagram)
