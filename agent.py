@@ -112,8 +112,6 @@ def get_instagram_client(dry_run=False):
         sys.exit(1)
         
     cl = Client()
-    # Simular un agente de móvil real
-    cl.set_user_agent("Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1")
     
     session_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "session.json")
     if os.path.exists(session_path):
