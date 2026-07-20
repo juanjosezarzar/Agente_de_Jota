@@ -1,0 +1,29 @@
+name: Auto-Responder DMs Gravity
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Permite ejecutar manualmente
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install google-genai instagrapi
+
+      - name: Run DM responder
+        env:
+          INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+          INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python agent.py --reply-dms

@@ -1,0 +1,39 @@
+name: Compartir Reels a Historias
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Requerido para confirmar cambios en shared_reels.txt
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install google-genai instagrapi
+
+      - name: Run share script
+        env:
+          INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+          INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python agent.py --share-story
+
+      - name: Commit and push shared history
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add shared_reels.txt
+          git commit -m "Update shared reels log [skip ci]" || echo "No changes to commit"
+          git push

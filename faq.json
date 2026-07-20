@@ -1,0 +1,50 @@
+{
+  "nombre_gimnasio": "Gravity Mall Sport",
+  "descripcion": "Centro de escalada y entrenamiento vertical de última generación ubicado en Mall Sport.",
+  "ubicacion": "Mall Sport, Avenida Las Condes 13451, Las Condes, Santiago, Chile.",
+  "contacto": {
+    "instagram": "@gravitymallsport",
+    "web": "https://gravitymallsport.cl"
+  },
+  "horarios": {
+    "horario_alto": {
+      "dias": "Lunes a Viernes de 16:00 a 20:30 hrs. Sábados, Domingos y Festivos todo el día.",
+      "descripcion": "Horario de mayor concurrencia."
+    },
+    "horario_bajo": {
+      "dias": "Lunes a Viernes de 09:00 a 16:00 hrs, y de 20:30 a 22:00 hrs.",
+      "descripcion": "Ideal para entrenar con más espacio y a un menor costo."
+    }
+  },
+  "tarifas_y_promociones": {
+    "arriendo_zapatillas": "$3.500 por sesión (pedulas de escalada).",
+    "promo_duo": {
+      "precio": "$14.500 por 2 personas",
+      "condiciones": "Válido solo Sábados y Domingos ingresando en el bloque de 13:00 a 15:00 hrs."
+    },
+    "polera_oficial": {
+      "precio": "$14.900",
+      "donde_comprar": "Disponible directamente en la recepción del gimnasio."
+    },
+    "membresias": {
+      "beneficios": [
+        "Acceso ilimitado a las instalaciones de Gravity Mall Sport.",
+        "Acceso libre a Gravity Talca.",
+        "Descuentos exclusivos en marcas asociadas (como Andesgear, Chileclimbers, etc.).",
+        "Invitaciones a eventos y comunidad."
+      ],
+      "renovacion": "Precios especiales pagando la mensualidad antes de la fecha de vencimiento."
+    },
+    "ticket_packs": {
+      "beneficios": [
+        "Los pases diarios comprados en pack no tienen fecha de vencimiento.",
+        "Se pueden compartir y traspasar a amigos.",
+        "Precio recarga especial pagando antes de 14 días después de tu última visita."
+      ]
+    }
+  },
+  "tono_de_voz": {
+    "estilo": "Cercano, motivador, escalador, enérgico y buena onda.",
+    "instrucciones": "Usa terminología de escalada (apretar, encadenar, pegues, boulder, muro). Trata a los clientes de 'tú', sé muy acogedor y despídete invitándolos a entrenar o a visitarnos en Mall Sport. Usa emojis escaladores (🧗, 🧗‍♂️, 🧗‍♀️, 🧗, ⚡, 💪, ⛰️)."
+  }
+}
