@@ -19,8 +19,8 @@ jobs:
           echo "Listing recent runs:"
           gh run list --limit 10
           
-          # Buscar el ID de la última ejecución (fallida o exitosa) de Compartir Reels a Historias
-          LATEST_RUN=$(gh run list --workflow "Compartir Reels a Historias" --limit 1 --json databaseId --jq '.[0].databaseId')
+          # Buscar el ID de la última ejecución (fallida o exitosa) del reporte
+          LATEST_RUN=$(gh run list --workflow "Reporte Semanal de Metricas" --limit 1 --json databaseId --jq '.[0].databaseId')
           
           if [ -n "$LATEST_RUN" ] && [ "$LATEST_RUN" != "null" ]; then
             echo "Descargando logs para la ejecución: $LATEST_RUN"
