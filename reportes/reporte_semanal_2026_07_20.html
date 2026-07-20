@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Rendimiento - Gravity Mall Sport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7b2cbf;
+            --primary-light: #f3e8ff;
+            --primary-dark: #5a189a;
+            --text-color: #2d3748;
+            --bg-light: #f7fafc;
+            --border-color: #e2e8f0;
+            --success: #38a169;
+            --purple-gradient: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 40px;
+        }
+        
+        /* Encabezado del Reporte */
+        .report-header {
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+        }
+        
+        .report-header h1 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--primary-dark);
+            font-size: 2.3rem;
+            margin: 0 0 8px 0;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .report-header h2 {
+            font-family: 'Outfit', sans-serif;
+            color: #4a5568;
+            font-size: 1.2rem;
+            margin: 0;
+            font-weight: 400;
+            font-style: italic;
+        }
+        
+        /* Caja de Metadatos */
+        .meta-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 25px;
+            background: linear-gradient(to right, #fbf8ff, #ffffff);
+            padding: 20px 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .meta-label {
+            font-weight: 700;
+            color: var(--primary-dark);
+            width: 150px;
+            flex-shrink: 0;
+        }
+        
+        .meta-val {
+            color: #4a5568;
+        }
+        
+        /* Tipografía de Secciones */
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            font-weight: 700;
+            page-break-before: always;
+        }
+        
+        /* Evitar salto de página en la primera sección */
+        h2:first-of-type {
+            page-break-before: avoid;
+            margin-top: 0;
+        }
+        
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            color: #2d3748;
+            font-size: 1.15rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            border-left: 3px solid var(--primary);
+            padding-left: 10px;
+        }
+        
+        p {
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 1rem;
+            color: #4a5568;
+            text-align: justify;
+        }
+        
+        /* Listas */
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 22px;
+            padding-left: 24px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #4a5568;
+        }
+        
+        strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 0.95rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+            text-align: left;
+            font-weight: 600;
+            padding: 14px 18px;
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-color);
+            color: #4a5568;
+        }
+        
+        tr:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+        
+        /* Destacados / Citas */
+        blockquote {
+            margin: 30px 0;
+            padding: 22px 28px;
+            background-color: var(--primary-light);
+            border-left: 6px solid var(--primary);
+            border-radius: 6px;
+        }
+        
+        blockquote p {
+            margin: 0;
+            color: var(--primary-dark);
+            font-size: 1.05rem;
+            font-weight: 500;
+            font-family: 'Outfit', sans-serif;
+            font-style: italic;
+        }
+        
+        /* Separadores */
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 45px 0;
+        }
+        
+        /* Ajustes de Impresión */
+        @media print {
+            body {
+                font-size: 10.5pt;
+            }
+            .container {
+                padding: 0;
+                max-width: 100%;
+            }
+            h2, h3, table, blockquote {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado Estilizado -->
+        <div class="report-header">
+            <h1>📈 REPORTE DE RENDIMIENTO @GRAVITYMALLSPORT</h1>
+            <h2>¡Escalando el Algoritmo y Conquistando la Comunidad! 🧗‍♂️🔥</h2>
+        </div>
+        
+        <!-- Metadatos Estilizados -->
+        <div class="meta-info">
+            <div class="meta-item">
+                <span class="meta-label">Para:</span>
+                <span class="meta-val">Equipo Directivo y Staff de Gravity Mall Sport</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">De:</span>
+                <span class="meta-val">Analista de Marketing y Community Manager</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Período de Análisis:</span>
+                <span class="meta-val">Q1 - Q2 (Datos consolidados al 2026)</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Tono de la Cuenta:</span>
+                <span class="meta-val">Motivador, técnico, comunitario y apasionado por la escalada.</span>
+            </div>
+        </div>
+        
+        <!-- Cuerpo del Reporte -->
+        <hr />
+<h2>1. RESUMEN EJECUTIVO</h2>
+<p>¡Hola, equipo! Hemos analizado el rendimiento de nuestras últimas interacciones y el panorama es sumamente emocionante. Con una comunidad sólida de <strong>6,735 seguidores</strong> y una biblioteca optimizada de <strong>105 publicaciones</strong>, @gravitymallsport se posiciona no solo como un muro de escalada, sino como un <strong>centro neurálgico del boulder y la escalada deportiva en Chile</strong>.</p>
+<h3>📊 Métricas Clave del Período Analizado:</h3>
+<ul>
+<li><strong>Total Reproducciones de Video (Reels):</strong> 90,869 vistas.</li>
+<li><strong>Promedio de Reproducciones por Reel:</strong> 22,717 vistas.</li>
+<li><strong>Total Interacciones (Likes + Comentarios):</strong> 594 interacciones directas en los 5 posts analizados.</li>
+<li><strong>Post con Mayor Alcance/Vistas:</strong> Curso de Iniciación (48.8K+ reproducciones).</li>
+<li><strong>Post con Mayor Engagement de la Comunidad:</strong> Lanzamiento Liga Gravity (218 likes / 15 comentarios).</li>
+</ul>
+<hr />
+<h2>2. ANÁLISIS DETALLADO DE RENDIMIENTO: REELS VS. CARRUSELES</h2>
+<p>La batalla de formatos en nuestro feed tiene un ganador claro para el <strong>alcance (Reach)</strong>, pero un aliado estratégico para la <strong>conversión y retención</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica</th>
+<th style="text-align: left;">Reels (Videos) 🎥</th>
+<th style="text-align: left;">Carruseles (Imágenes) 📑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Volumen de Posts</strong></td>
+<td style="text-align: left;">4 posts analizados</td>
+<td style="text-align: left;">1 post analizado</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vistas Promedio</strong></td>
+<td style="text-align: left;"><strong>22,717</strong></td>
+<td style="text-align: left;">N/A</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Likes Promedio</strong></td>
+<td style="text-align: left;"><strong>119.75</strong></td>
+<td style="text-align: left;"><strong>87</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Comentarios Prom</strong></td>
+<td style="text-align: left;"><strong>6</strong></td>
+<td style="text-align: left;"><strong>4</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Objetivo Principal</strong></td>
+<td style="text-align: left;">Visibilidad, Viralidad y Captación</td>
+<td style="text-align: left;">Información detallada, Guardados y Venta</td>
+</tr>
+</tbody>
+</table>
+<h3>🏆 El Podio de las Publicaciones</h3>
+<h4>🥇 El Rey del Alcance: <em>Curso de Iniciación</em> (ID: <code>DaDdXn-IZNG</code>)</h4>
+<ul>
+<li><strong>Rendimiento:</strong> <strong>48,871 reproducciones</strong>, 110 likes.</li>
+<li><strong>¿Por qué funcionó?</strong> El gancho inicial <em>"¿Siempre has querido escalar pero no sabes por dónde empezar?"</em> ataca directamente el dolor del usuario novato (el miedo o la incertidumbre). Además, la estructura en formato "checklist" (los 4 pilares) genera confianza y estructura. Es un contenido altamente compartible.</li>
+</ul>
+<h4>🥈 El Rey del Engagement: <em>Liga Gravity 2026</em> (ID: <code>DWmzynbjsFV</code>)</h4>
+<ul>
+<li><strong>Rendimiento:</strong> <strong>218 likes, 15 comentarios</strong>, 22,937 reproducciones.</li>
+<li><strong>¿Por qué funcionó?</strong> Apela directamente al núcleo de nuestra comunidad activa (los escaladores recurrentes). La competencia genera identidad, pertenencia y urgencia. Mencionó marcas aliadas (co-marketing), lo que expandió orgánicamente el alcance de la publicación.</li>
+</ul>
+<h4>🥉 El Estable de Conversión: <em>Membresías 2026 (Carrusel)</em> (ID: <code>DS8ZBqZDslr</code>)</h4>
+<ul>
+<li><strong>Rendimiento:</strong> 87 likes, 4 comentarios.</li>
+<li><strong>¿Por qué funcionó?</strong> Aunque numéricamente es menor, su valor es transaccional. Explicar los "beneficios de renovar" genera retención. Este tipo de post es el que la gente "Guarda" para consultar precios más tarde.</li>
+</ul>
+<h4>⚠️ El "Bajo la Par": <em>Boulder Beats is Back</em> (ID: <code>DagdRUZsWAf</code>)</h4>
+<ul>
+<li><strong>Rendimiento:</strong> 63 likes, 0 comentarios (9.8K vistas).</li>
+<li><strong>Diagnóstico:</strong> Un evento tan potente como música + DJ + cerveza + 80 rutas nuevas merecía más tracción. La falta de comentarios se debió a un llamado a la acción (CTA) débil o a que se publicó muy encima de la fecha (publicado el 7 de Julio para el evento del 10 de Julio).</li>
+</ul>
+<hr />
+<h2>3. INSIGHTS CLAVE (Lo que la comunidad nos está diciendo)</h2>
+<ol>
+<li><strong>La democratización de la escalada es viral:</strong> El contenido para principiantes revienta el algoritmo. Hay un público gigante en Santiago que quiere empezar a escalar pero necesita que le "quitemos el miedo".</li>
+<li><strong>La "Tribu" se mueve por el evento y la competencia:</strong> El orgullo local y la competencia (Liga Gravity) movilizan comentarios, etiquetas a amigos y compartidos.</li>
+<li><strong>Las Alianzas Estratégicas dan seriedad:</strong> El post con Kinup demuestra que nos preocupamos por la salud y progresión del escalador, construyendo un valor de marca 360°.</li>
+</ol>
+<hr />
+<h2>4. RECOMENDACIONES Y PLAN DE ACCIÓN PARA LA PRÓXIMA SEMANA</h2>
+<p><em>(Estrategias listas para encadenar en el muro de Instagram)</em></p>
+<h3>1. Plan de Contenidos: "De Cero a Pro" (Para replicar el éxito de los 48K de vistas)</h3>
+<ul>
+<li><strong>Idea de Reel 1 (Educativo/Captación):</strong> <em>"3 errores comunes que cometes en tu primer día de Boulder (y cómo evitarlos)"</em>. <ul>
+<li><em>Hook:</em> Mostrar a alguien resbalando o usando mal los brazos, y luego la corrección técnica de un instructor.</li>
+</ul>
+</li>
+<li><strong>Idea de Reel 2 (Comunidad/Humor):</strong> <em>"Diccionario de Escaladores: Qué significa cuando te dicen..."</em> (Explicar conceptos como <em>beta</em>, <em>dinámico</em>, <em>regleta</em>, <em>dar un pegue</em>). Esto genera cercanía y engagement en comentarios.</li>
+</ul>
+<h3>2. Optimización de Eventos (Caso "Boulder Beats")</h3>
+<ul>
+<li>Para el próximo evento, no dependas de un solo Reel informativo. Aplica la <strong>estrategia de goteo (Drip Campaign)</strong>:<ul>
+<li><em>Día -5:</em> Reel rápido de los abridores (Route Setters) creando los 80 bloques nuevos (hype técnico).</li>
+<li><em>Día -3:</em> Historia con sticker de cuenta regresiva y encuesta ("¿Qué cerveza prefieres?").</li>
+<li><em>Día del evento:</em> Cobertura en vivo constante por Stories.</li>
+</ul>
+</li>
+</ul>
+<h3>3. Llamados a la Acción (CTA) Altamente Efectivos</h3>
+<p>Dejemos de usar solo el clásico "Link en la bio". Usemos la automatización y la interacción humana:
+*   <strong>En posts de Cursos/Membresías:</strong> <em>“Comenta la palabra 'CURSO' y te enviamos toda la información y precios directamente a tu bandeja de entrada 📩”</em>. (Esto aumenta exponencialmente los comentarios y activa el algoritmo).
+*   <strong>En posts de Comunidad:</strong> <em>“Etiqueta a tu 'asegurador' de confianza, ese que nunca te dejaría caer 🤝”</em>.</p>
+<h3>4. Estética y "Vibe" de Escalada</h3>
+<ul>
+<li>Mantener el uso de colores corporativos (el morado/violeta que ya destaca en el feed) combinado con texturas de magnesio, roca y la energía del gimnasio lleno.</li>
+<li><strong>¡Usa la música adecuada!</strong> Para Reels de escalada fuerte (Liga/Boulder Beats), utiliza audios en tendencia de indie rock, beats electrónicos o hip-hop enérgico.</li>
+</ul>
+<hr />
+<h3>Mensaje Final para el Equipo:</h3>
+<p><em>"El muro está listo, las rutas están propuestas y la comunidad tiene los dedos llenos de magnesio esperando nuestro próximo movimiento. ¡Sigamos escalando este proyecto juntos!"</em> 💜🧗‍♀️</p>
+<p><strong>¿Aprobamos esta estrategia para comenzar con la producción del nuevo material audiovisual esta semana?</strong> ¡Atento a sus comentarios para empezar a abrir las nuevas rutas del algoritmo!</p>
+    </div>
+</body>
+</html>
