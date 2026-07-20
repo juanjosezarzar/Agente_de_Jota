@@ -117,19 +117,20 @@ def get_instagram_client(dry_run=False):
     if os.path.exists(session_path):
         try:
             cl.load_settings(session_path)
-            cl.login(username, password)
-            print("[Instagram] Sesión cargada desde cache con éxito.")
+            # Validar de forma ligera si la sesión cargada funciona realmente
+            cl.user_info(cl.user_id)
+            print("[Instagram] Sesión cargada desde cache con éxito (sin necesidad de login).")
             return cl
         except Exception as e:
-            print(f"[Instagram] No se pudo cargar la sesión previa ({e}). Iniciando sesión desde cero...")
+            print(f"[Instagram] Sesión previa no válida o expirada ({e}). Intentando login convencional...")
             
     try:
         cl.login(username, password)
         cl.dump_settings(session_path)
-        print("[Instagram] Inicio de sesión exitoso. Sesión guardada.")
+        print("[Instagram] Inicio de sesión convencional exitoso. Sesión guardada.")
         return cl
     except Exception as e:
-        print(f"{COLOR_RED}[Instagram] ERROR crítico al iniciar sesión: {e}{COLOR_RESET}")
+        print(f"{COLOR_RED}[Instagram] ERROR crítico al iniciar sesión convencional: {e}{COLOR_RESET}")
         sys.exit(1)
 
 # --- ACCIONES ---
