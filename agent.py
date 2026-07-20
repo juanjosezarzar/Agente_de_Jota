@@ -58,7 +58,7 @@ WEATHER_CODES = {
 }
 
 def generate_content_with_fallback(gemini_client, prompt):
-    models = ["gemini-3.5-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-2.5-pro"]
+    models = ["gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-flash-lite-latest", "gemini-flash-latest"]
     last_err = None
     for model_name in models:
         try:
