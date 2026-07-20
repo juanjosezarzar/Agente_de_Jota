@@ -21,6 +21,14 @@ jobs:
         run: |
           pip install google-genai instagrapi
 
+      - name: Recreate session.json from secret
+        env:
+          SESSION_SETTINGS: ${{ secrets.INSTAGRAM_SESSION_SETTINGS }}
+        run: |
+          if [ -n "$SESSION_SETTINGS" ]; then
+            echo "$SESSION_SETTINGS" > session.json
+          fi
+
       - name: Run DM responder
         env:
           INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
