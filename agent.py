@@ -114,23 +114,33 @@ def get_instagram_client(dry_run=False):
     cl = Client()
     
     session_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "session.json")
+    print(f"[Instagram] Buscando archivo de sesión en: {session_path}", flush=True)
     if os.path.exists(session_path):
+        size = os.path.getsize(session_path)
+        print(f"[Instagram] Archivo session.json encontrado (Tamaño: {size} bytes). Cargando...", flush=True)
         try:
             cl.load_settings(session_path)
+            print(f"[Instagram] Configuración cargada. Validando sesión para user_id: {cl.user_id}...", flush=True)
             # Validar de forma ligera si la sesión cargada funciona realmente
-            cl.user_info(cl.user_id)
-            print("[Instagram] Sesión cargada desde cache con éxito (sin necesidad de login).")
+            info = cl.user_info(cl.user_id)
+            print(f"[Instagram] Sesión cargada desde cache con éxito para @{info.username} (sin necesidad de login).", flush=True)
             return cl
         except Exception as e:
-            print(f"[Instagram] Sesión previa no válida o expirada ({e}). Intentando login convencional...")
+            import traceback
+            print(f"[Instagram] Sesión previa no válida o expirada. Detalles del error:", flush=True)
+            traceback.print_exc()
+            print("[Instagram] Intentando login convencional...", flush=True)
+    else:
+        print("[Instagram] Archivo session.json no encontrado. Se requiere login convencional.", flush=True)
             
     try:
+        print("[Instagram] Iniciando login convencional...", flush=True)
         cl.login(username, password)
         cl.dump_settings(session_path)
-        print("[Instagram] Inicio de sesión convencional exitoso. Sesión guardada.")
+        print("[Instagram] Inicio de sesión convencional exitoso. Sesión guardada.", flush=True)
         return cl
     except Exception as e:
-        print(f"{COLOR_RED}[Instagram] ERROR crítico al iniciar sesión convencional: {e}{COLOR_RESET}")
+        print(f"{COLOR_RED}[Instagram] ERROR crítico al iniciar sesión convencional: {e}{COLOR_RESET}", flush=True)
         sys.exit(1)
 
 # --- ACCIONES ---
