@@ -1,0 +1,45 @@
+name: Debug Logs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch failed logs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Listing recent runs:"
+          gh run list --limit 10
+          
+          # Buscar el ID de la última ejecución fallida del reporte
+          FAILED_RUN=$(gh run list --workflow "Reporte Semanal de Metricas" --status failure --limit 1 --json databaseId --jq '.[0].databaseId')
+          
+          if [ -n "$FAILED_RUN" ] && [ "$FAILED_RUN" != "null" ]; then
+            echo "Descargando logs para la ejecución fallida: $FAILED_RUN"
+            gh run view $FAILED_RUN --log > error_log.txt
+          else
+            # Si no hay del reporte, buscar cualquier ejecución fallida
+            ANY_FAILED=$(gh run list --status failure --limit 1 --json databaseId --jq '.[0].databaseId')
+            if [ -n "$ANY_FAILED" ] && [ "$ANY_FAILED" != "null" ]; then
+              echo "Descargando logs de la ejecución fallida genérica: $ANY_FAILED"
+              gh run view $ANY_FAILED --log > error_log.txt
+            else
+              echo "No se encontraron ejecuciones fallidas recientes." > error_log.txt
+            fi
+          fi
+
+      - name: Commit and push logs
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add error_log.txt
+          git commit -m "Fetch error logs from failed run [skip ci]" || echo "No changes to commit"
+          git push
