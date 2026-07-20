@@ -204,8 +204,27 @@ def share_reels_to_stories(dry_run=False):
         
         # Compartir a Historia
         print("Compartiendo Reel a Historias...")
-        cl.media_share_to_story(reel_id_to_share)
         
+        # Crear un fondo morado corporativo (9:16)
+        from PIL import Image
+        bg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bg_story.jpg")
+        img = Image.new('RGB', (1080, 1920), color='#7B2CBF')
+        img.save(bg_path)
+        
+        # Crear sticker de la publicación (Reel)
+        from instagrapi.types import StoryMedia
+        feed_media = StoryMedia(media_pk=int(reel_id_to_share), user_id=int(cl.user_id))
+        
+        # Subir historia
+        cl.photo_upload_to_story(bg_path, medias=[feed_media])
+        
+        # Limpiar fondo temporal
+        try:
+            if os.path.exists(bg_path):
+                os.remove(bg_path)
+        except Exception:
+            pass
+            
         # Registrar en el historial
         with open(history_file, "a") as f:
             f.write(f"{reel_id_to_share}\n")
