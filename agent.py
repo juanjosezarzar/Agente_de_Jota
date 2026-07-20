@@ -197,8 +197,9 @@ def share_reels_to_stories(dry_run=False):
 
     try:
         user_id = cl.user_id
-        print(f"Obteniendo Reels de la cuenta (ID: {user_id})...")
-        reels = cl.user_clips(user_id, amount=20)
+        print(f"Obteniendo publicaciones de la cuenta (ID: {user_id})...")
+        medias = cl.user_medias(user_id, amount=30)
+        reels = [m for m in medias if m.media_type == 2 and getattr(m, "product_type", "") == "clips"]
         
         # Filtrar Reels no compartidos, del año actual y que no contengan palabras excluidas (eventos pasados)
         current_year = datetime.now().year
