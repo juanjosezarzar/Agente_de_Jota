@@ -233,6 +233,7 @@ def share_reels_to_stories(dry_run=False):
         
     except Exception as e:
         print(f"{COLOR_RED}Error al compartir Reel: {str(e)}{COLOR_RESET}")
+        sys.exit(1)
 
 def reply_dms(dry_run=False):
     print(f"\n{COLOR_BOLD}{COLOR_GREEN}=== Tarea: Responder DMs de Clientes ==={COLOR_RESET}")
@@ -333,6 +334,7 @@ def reply_dms(dry_run=False):
             
     except Exception as e:
         print(f"{COLOR_RED}Error al responder DMs: {str(e)}{COLOR_RESET}")
+        sys.exit(1)
 
 def generate_weekly_report(dry_run=False):
     print(f"\n{COLOR_BOLD}{COLOR_GREEN}=== Tarea: Reporte Semanal de Métricas ==={COLOR_RESET}")
@@ -382,7 +384,7 @@ def generate_weekly_report(dry_run=False):
                 })
         except Exception as e:
             print(f"{COLOR_RED}Error al obtener métricas de Instagram: {str(e)}{COLOR_RESET}")
-            return
+            sys.exit(1)
 
     # Redactar reporte con Gemini
     posts_json = json.dumps(posts_data, indent=2, ensure_ascii=False)
@@ -517,6 +519,7 @@ def repost_mentions(dry_run=False):
             
     except Exception as e:
         print(f"{COLOR_RED}Error al buscar menciones: {str(e)}{COLOR_RESET}")
+        sys.exit(1)
 
 
 # --- CHAT INTERACTIVO (MODO ANTERIOR) ---
