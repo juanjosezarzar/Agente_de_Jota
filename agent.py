@@ -57,6 +57,20 @@ WEATHER_CODES = {
     95: ("Tormenta eléctrica", "⛈️"), 96: ("Tormenta con granizo leve", "⛈️🌨️"), 99: ("Tormenta con granizo fuerte", "⛈️🌨️"),
 }
 
+def generate_content_with_fallback(gemini_client, prompt):
+    models = ["gemini-3.5-flash", "gemini-1.5-flash", "gemini-2.5-pro", "gemini-1.5-pro"]
+    last_err = None
+    for model_name in models:
+        try:
+            print(f"[Gemini] Intentando generar contenido con el modelo {model_name}...", flush=True)
+            response = gemini_client.models.generate_content(model=model_name, contents=prompt)
+            print(f"[Gemini] Éxito con el modelo {model_name}.", flush=True)
+            return response
+        except Exception as e:
+            print(f"[Gemini] Error con el modelo {model_name}: {e}. Intentando el siguiente fallback...", flush=True)
+            last_err = e
+    raise last_err or Exception("Todos los modelos de Gemini fallaron.")
+
 # --- HERRAMIENTAS LOCALES ---
 
 def get_current_weather(city_name: str) -> str:
@@ -244,7 +258,7 @@ def reply_dms(dry_run=False):
         4. SI la información no está en el FAQ, di de forma muy educada que no tienes el detalle exacto ahora mismo pero que transferirás el mensaje a un administrador humano para que le responda a la brevedad. NO inventes precios, horarios o servicios que no estén en el FAQ.
         5. Mantén la respuesta concisa y directa, ideal para leer en Instagram DMs.
         """
-        response = gemini_client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+        response = generate_content_with_fallback(gemini_client, prompt)
         print(f"[DRY RUN] Respuesta generada por Gemini:\n{COLOR_CYAN}{response.text}{COLOR_RESET}")
         return
 
@@ -287,7 +301,7 @@ def reply_dms(dry_run=False):
             5. Mantén la respuesta concisa y directa, ideal para leer en Instagram DMs.
             """
             
-            response = gemini_client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+            response = generate_content_with_fallback(gemini_client, prompt)
             reply_text = response.text
             
             # Enviar mensaje
@@ -374,7 +388,7 @@ def generate_weekly_report(dry_run=False):
     """
     
     print("Gemini analizando estadísticas y redactando informe...")
-    response = gemini_client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+    response = generate_content_with_fallback(gemini_client, prompt)
     report_md = response.text
     
     # Guardar reporte localmente
