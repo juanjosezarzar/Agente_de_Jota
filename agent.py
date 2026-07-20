@@ -112,7 +112,6 @@ def get_instagram_client(dry_run=False):
         sys.exit(1)
         
     cl = Client()
-    
     session_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "session.json")
     print(f"[Instagram] Buscando archivo de sesión en: {session_path}", flush=True)
     if os.path.exists(session_path):
@@ -121,8 +120,8 @@ def get_instagram_client(dry_run=False):
         try:
             cl.load_settings(session_path)
             print(f"[Instagram] Configuración cargada. Validando sesión para user_id: {cl.user_id}...", flush=True)
-            # Validar de forma ligera si la sesión cargada funciona realmente
-            info = cl.user_info(cl.user_id)
+            # Validar usando la API privada (V1)
+            info = cl.user_info_v1(cl.user_id)
             print(f"[Instagram] Sesión cargada desde cache con éxito para @{info.username} (sin necesidad de login).", flush=True)
             return cl
         except Exception as e:
@@ -142,7 +141,6 @@ def get_instagram_client(dry_run=False):
     except Exception as e:
         print(f"{COLOR_RED}[Instagram] ERROR crítico al iniciar sesión convencional: {e}{COLOR_RESET}", flush=True)
         sys.exit(1)
-
 # --- ACCIONES ---
 
 def share_reels_to_stories(dry_run=False):
@@ -325,7 +323,7 @@ def generate_weekly_report(dry_run=False):
         try:
             user_id = cl.user_id
             print("Obteniendo información del perfil...")
-            info = cl.user_info(user_id)
+            info = cl.user_info_v1(user_id)
             followers = info.follower_count
             following = info.following_count
             media_count = info.media_count
@@ -442,7 +440,7 @@ def repost_mentions(dry_run=False):
                     
                     try:
                         # 1. Obtener información del usuario que nos etiquetó
-                        user_info = cl.user_info(message.user_id)
+                        user_info = cl.user_info_v1(message.user_id)
                         print(f"Descargando historia de @{user_info.username}...")
                         
                         # 2. Descargar la historia original
