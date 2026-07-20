@@ -19,20 +19,34 @@ jobs:
           echo "Listing recent runs:"
           gh run list --limit 10
           
-          # Buscar el ID de la última ejecución (fallida o exitosa) del reporte
-          LATEST_RUN=$(gh run list --workflow "Reporte Semanal de Metricas" --limit 1 --json databaseId --jq '.[0].databaseId')
+          # 1. Reporte Semanal
+          RUN_REP=$(gh run list --workflow "Reporte Semanal de Metricas" --limit 1 --json databaseId --jq '.[0].databaseId')
+          if [ -n "$RUN_REP" ] && [ "$RUN_REP" != "null" ]; then
+            gh run view $RUN_REP --log > log_reporte.txt
+          fi
           
-          if [ -n "$LATEST_RUN" ] && [ "$LATEST_RUN" != "null" ]; then
-            echo "Descargando logs para la ejecución: $LATEST_RUN"
-            gh run view $LATEST_RUN --log > error_log.txt
-          else
-            echo "No se encontraron ejecuciones recientes." > error_log.txt
+          # 2. Compartir Reels
+          RUN_SHARE=$(gh run list --workflow "Compartir Reels a Historias" --limit 1 --json databaseId --jq '.[0].databaseId')
+          if [ -n "$RUN_SHARE" ] && [ "$RUN_SHARE" != "null" ]; then
+            gh run view $RUN_SHARE --log > log_share.txt
+          fi
+          
+          # 3. Auto-Responder DMs
+          RUN_DMS=$(gh run list --workflow "Auto-Responder DMs Gravity" --limit 1 --json databaseId --jq '.[0].databaseId')
+          if [ -n "$RUN_DMS" ] && [ "$RUN_DMS" != "null" ]; then
+            gh run view $RUN_DMS --log > log_dms.txt
+          fi
+          
+          # 4. Repost Menciones
+          RUN_MENC=$(gh run list --workflow "Repost Menciones Story" --limit 1 --json databaseId --jq '.[0].databaseId')
+          if [ -n "$RUN_MENC" ] && [ "$RUN_MENC" != "null" ]; then
+            gh run view $RUN_MENC --log > log_menciones.txt
           fi
 
       - name: Commit and push logs
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add error_log.txt
-          git commit -m "Fetch error logs from failed run [skip ci]" || echo "No changes to commit"
+          git add log_*.txt
+          git commit -m "Fetch all execution logs [skip ci]" || echo "No changes to commit"
           git push
