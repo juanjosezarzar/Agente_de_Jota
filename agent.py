@@ -244,7 +244,7 @@ def reply_dms(dry_run=False):
         4. SI la información no está en el FAQ, di de forma muy educada que no tienes el detalle exacto ahora mismo pero que transferirás el mensaje a un administrador humano para que le responda a la brevedad. NO inventes precios, horarios o servicios que no estén en el FAQ.
         5. Mantén la respuesta concisa y directa, ideal para leer en Instagram DMs.
         """
-        response = gemini_client.models.generate_content(model="gemini-3.5-flash", contents=prompt)
+        response = gemini_client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
         print(f"[DRY RUN] Respuesta generada por Gemini:\n{COLOR_CYAN}{response.text}{COLOR_RESET}")
         return
 
@@ -287,7 +287,7 @@ def reply_dms(dry_run=False):
             5. Mantén la respuesta concisa y directa, ideal para leer en Instagram DMs.
             """
             
-            response = gemini_client.models.generate_content(model="gemini-3.5-flash", contents=prompt)
+            response = gemini_client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
             reply_text = response.text
             
             # Enviar mensaje
@@ -374,7 +374,7 @@ def generate_weekly_report(dry_run=False):
     """
     
     print("Gemini analizando estadísticas y redactando informe...")
-    response = gemini_client.models.generate_content(model="gemini-3.5-flash", contents=prompt)
+    response = gemini_client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
     report_md = response.text
     
     # Guardar reporte localmente
