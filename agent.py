@@ -29,6 +29,27 @@ except ImportError:
     print("ERROR: La librería 'google-genai' no está instalada. Ejecuta: pip3 install google-genai")
     sys.exit(1)
 
+# Parchear instagrapi para evitar errores de validación de Pydantic v2 con esquemas URL no estándar (como instagram://)
+def patch_instagrapi():
+    try:
+        import os
+        import importlib.util
+        spec = importlib.util.find_spec("instagrapi")
+        if spec and spec.origin:
+            types_path = os.path.join(os.path.dirname(spec.origin), "types.py")
+            if os.path.exists(types_path):
+                with open(types_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                if "video_url: HttpUrl" in content:
+                    print("[Patch] Modificando video_url: HttpUrl en instagrapi.types a video_url: str para evitar errores de Pydantic...")
+                    content = content.replace("video_url: HttpUrl", "video_url: str")
+                    with open(types_path, "w", encoding="utf-8") as f:
+                        f.write(content)
+    except Exception as e:
+        print(f"[Patch Error] No se pudo parchar instagrapi: {e}")
+
+patch_instagrapi()
+
 try:
     from instagrapi import Client
     from instagrapi.types import StoryMention
