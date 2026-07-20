@@ -1,0 +1,39 @@
+name: Repost Menciones Story
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  repost:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Requerido para confirmar cambios en reposted_mentions.txt
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install google-genai instagrapi
+
+      - name: Run repost mentions script
+        env:
+          INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+          INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python agent.py --repost-mentions
+
+      - name: Commit and push mentions log
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reposted_mentions.txt
+          git commit -m "Update reposted mentions log [skip ci]" || echo "No changes to commit"
+          git push

@@ -1,0 +1,1 @@
+# Registro de IDs de menciones en historias ya reposteadas. No modificar manualmente.

@@ -31,6 +31,7 @@ except ImportError:
 
 try:
     from instagrapi import Client
+    from instagrapi.types import StoryMention
 except ImportError:
     # Si estamos en cron, alertar. Si no, podemos fallar solo cuando se llame a Instagram
     pass
@@ -157,15 +158,17 @@ def share_reels_to_stories(dry_run=False):
         print(f"Obteniendo Reels de la cuenta (ID: {user_id})...")
         reels = cl.user_clips(user_id, amount=20)
         
-        # Filtrar Reels no compartidos
+        # Filtrar Reels no compartidos y del año actual
+        current_year = datetime.now().year
         pending_reels = []
         for reel in reels:
             reel_id = str(getattr(reel, "pk", None) or getattr(reel, "id", None))
-            if reel_id not in shared_ids:
+            reel_year = reel.taken_at.year if getattr(reel, "taken_at", None) else None
+            if reel_id not in shared_ids and reel_year == current_year:
                 pending_reels.append((reel_id, reel))
                 
         if not pending_reels:
-            print("No hay Reels nuevos pendientes por compartir. ¡Todo al día!")
+            print(f"No hay Reels nuevos de este año ({current_year}) pendientes por compartir.")
             return
             
         # Seleccionar el más antiguo de los pendientes (el último de la lista devuelta por Instagram)
@@ -375,6 +378,101 @@ def generate_weekly_report(dry_run=False):
     print(f"{COLOR_BOLD}=== VISTA PREVIA DEL INFORME ==={COLOR_RESET}\n")
     print(report_md)
 
+# --- TAREA: REPOSTEAR MENCIONES ---
+
+def repost_mentions(dry_run=False):
+    print(f"\n{COLOR_BOLD}{COLOR_GREEN}=== Tarea: Repostear Menciones en Historias ==={COLOR_RESET}")
+    
+    # Cargar historial de menciones ya compartidas
+    history_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "reposted_mentions.txt")
+    reposted_ids = set()
+    if os.path.exists(history_file):
+        with open(history_file, "r") as f:
+            reposted_ids = {line.strip() for line in f if line.strip()}
+
+    cl = get_instagram_client(dry_run)
+    
+    if dry_run:
+        print("[DRY RUN] Simulación: Buscando DMs con menciones en historias...")
+        return
+
+    try:
+        # Obtener los hilos de mensajes
+        print("Obteniendo DMs recientes...")
+        threads = cl.direct_threads(amount=15)
+        
+        reposted_any = False
+        
+        for thread in threads:
+            # Revisar los últimos mensajes de cada chat
+            for message in thread.messages[:5]:
+                # Verificar si es un mensaje de compartir historia (mención)
+                if message.item_type == "story_share" and message.user_id != cl.user_id:
+                    story_share = getattr(message, "story_share", None)
+                    if not story_share:
+                        continue
+                        
+                    # Extraer el ID de la historia original
+                    media = getattr(story_share, "media", None)
+                    if not media:
+                        continue
+                        
+                    media_id = str(getattr(media, "pk", None) or getattr(media, "id", None))
+                    
+                    # Evitar duplicados
+                    if media_id in reposted_ids:
+                        continue
+                        
+                    print(f"Nueva mención detectada en historia de ID {media_id} (Usuario ID: {message.user_id})")
+                    
+                    try:
+                        # 1. Obtener información del usuario que nos etiquetó
+                        user_info = cl.user_info(message.user_id)
+                        print(f"Descargando historia de @{user_info.username}...")
+                        
+                        # 2. Descargar la historia original
+                        path = cl.story_download(media_id)
+                        path_str = str(path)
+                        
+                        # 3. Crear el sticker de mención para dar créditos
+                        mention = StoryMention(user=user_info, x=0.5, y=0.7, width=0.3, height=0.1)
+                        
+                        # 4. Subir la historia a nuestra cuenta
+                        print(f"Subiendo a nuestra historia y etiquetando a @{user_info.username}...")
+                        if path_str.lower().endswith((".mp4", ".mov")):
+                            cl.video_upload_to_story(path, mentions=[mention])
+                        else:
+                            cl.photo_upload_to_story(path, mentions=[mention])
+                            
+                        # Limpiar el archivo descargado
+                        try:
+                            import pathlib
+                            if isinstance(path, pathlib.Path):
+                                if path.exists():
+                                    path.unlink()
+                            elif os.path.exists(path_str):
+                                os.remove(path_str)
+                        except Exception as path_err:
+                            print(f"Aviso: No se pudo eliminar el archivo temporal: {path_err}")
+                            
+                        # Registrar ID
+                        reposted_ids.add(media_id)
+                        with open(history_file, "a") as f:
+                            f.write(f"{media_id}\n")
+                            
+                        print(f"{COLOR_GREEN}¡Mención repostada con éxito!{COLOR_RESET}")
+                        reposted_any = True
+                        
+                    except Exception as e:
+                        print(f"{COLOR_RED}Error al procesar la mención {media_id}: {e}{COLOR_RESET}")
+                        
+        if not reposted_any:
+            print("No se encontraron menciones nuevas para repostear.")
+            
+    except Exception as e:
+        print(f"{COLOR_RED}Error al buscar menciones: {str(e)}{COLOR_RESET}")
+
+
 # --- CHAT INTERACTIVO (MODO ANTERIOR) ---
 
 def run_chat_interface():
@@ -441,6 +539,7 @@ if __name__ == "__main__":
     parser.add_argument("--share-story", action="store_true", help="Busca el Reel más antiguo no compartido y lo sube a Historias")
     parser.add_argument("--reply-dms", action="store_true", help="Revisa DMs no leídos y les responde usando Gemini")
     parser.add_argument("--metrics-report", action="store_true", help="Obtiene métricas de Instagram y escribe un reporte semanal en Markdown")
+    parser.add_argument("--repost-mentions", action="store_true", help="Busca historias donde nos mencionaron y las comparte en las nuestras")
     parser.add_argument("--dry-run", action="store_true", help="Simula las acciones de Instagram sin conectarse realmente")
     
     args = parser.parse_args()
@@ -451,5 +550,7 @@ if __name__ == "__main__":
         reply_dms(args.dry_run)
     elif args.metrics_report:
         generate_weekly_report(args.dry_run)
+    elif args.repost_mentions:
+        repost_mentions(args.dry_run)
     else:
         run_chat_interface()
