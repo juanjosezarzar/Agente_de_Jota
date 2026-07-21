@@ -1,352 +1,371 @@
-reply	UNKNOWN STEP	﻿2026-07-20T20:34:07.4564653Z Current runner version: '2.335.1'
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4598243Z ##[group***Runner Image Provisioner
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4600246Z Hosted Compute Agent
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4601691Z Version: 20260707.563
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4603286Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4604961Z Build Date: 2026-07-07T19:33:50Z
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4606637Z Worker ID: ***d372e137-4872-4ad3-9c61-0f78d9a977b9***
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4608445Z Azure Region: westus
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4609952Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4612523Z ##[group***Operating System
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4614115Z Ubuntu
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4615462Z 24.04.4
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4616814Z LTS
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4618629Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4620186Z ##[group***Runner Image
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4621627Z Image: ubuntu-24.04
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4623333Z Version: 20260714.240.1
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4625552Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4628508Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4630502Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4633122Z ##[group***GITHUB_TOKEN Permissions
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4636358Z Contents: read
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4637777Z Metadata: read
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4639503Z Packages: read
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4640920Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4644674Z Secret source: Actions
-reply	UNKNOWN STEP	2026-07-20T20:34:07.4646399Z Prepare workflow directory
-reply	UNKNOWN STEP	2026-07-20T20:34:07.5038354Z Prepare all required actions
-reply	UNKNOWN STEP	2026-07-20T20:34:07.5079110Z Getting action download info
-reply	UNKNOWN STEP	2026-07-20T20:34:07.8526148Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
-reply	UNKNOWN STEP	2026-07-20T20:34:08.3517295Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
-reply	UNKNOWN STEP	2026-07-20T20:34:08.5829003Z Complete job name: reply
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6770934Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6781198Z ##[group***Run actions/checkout@v4
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6782571Z with:
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6783644Z   repository: juanjosezarzar/Agente_de_Jota
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6788561Z   token: ***
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6789571Z   ssh-strict: true
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6790628Z   ssh-user: git
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6791667Z   persist-credentials: true
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6792741Z   clean: true
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6793782Z   sparse-checkout-cone-mode: true
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6795064Z   fetch-depth: 1
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6796079Z   fetch-tags: false
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6797115Z   show-progress: true
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6798407Z   lfs: false
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6799454Z   submodules: false
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6800499Z   set-safe-directory: true
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6801623Z   allow-unsafe-pr-checkout: false
-reply	UNKNOWN STEP	2026-07-20T20:34:08.6803077Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:08.7889224Z Syncing repository: juanjosezarzar/Agente_de_Jota
-reply	UNKNOWN STEP	2026-07-20T20:34:08.7894290Z ##[group***Getting Git version info
-reply	UNKNOWN STEP	2026-07-20T20:34:08.7896794Z Working directory is '/home/runner/work/Agente_de_Jota/Agente_de_Jota'
-reply	UNKNOWN STEP	2026-07-20T20:34:08.7901090Z [command***/usr/bin/git version
-reply	UNKNOWN STEP	2026-07-20T20:34:08.7976509Z git version 2.54.0
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8040906Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8054649Z Temporarily overriding HOME='/home/runner/work/_temp/e47a8d3f-77db-4277-8d99-499676bc0fbe' before making global git config changes
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8058617Z Adding repository directory to the temporary git global config as a safe directory
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8061967Z [command***/usr/bin/git config --global --add safe.directory /home/runner/work/Agente_de_Jota/Agente_de_Jota
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8119731Z Deleting the contents of '/home/runner/work/Agente_de_Jota/Agente_de_Jota'
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8124765Z ##[group***Initializing the repository
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8129802Z [command***/usr/bin/git init /home/runner/work/Agente_de_Jota/Agente_de_Jota
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8251113Z hint: Using 'master' as the name for the initial branch. This default branch name
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8254584Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8257558Z hint: to use in all of your new repositories, which will suppress this warning,
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8259534Z hint: call:
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8260564Z hint:
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8262495Z hint: 	git config --global init.defaultBranch <name>
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8264502Z hint:
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8265805Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8268158Z hint: 'development'. The just-created branch can be renamed via this command:
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8270025Z hint:
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8271115Z hint: 	git branch -m <name>
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8272186Z hint:
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8273477Z hint: Disable this message with "git config set advice.defaultBranchName false"
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8275231Z Initialized empty Git repository in /home/runner/work/Agente_de_Jota/Agente_de_Jota/.git/
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8279418Z [command***/usr/bin/git remote add origin https://github.com/juanjosezarzar/Agente_de_Jota
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8334903Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8336740Z ##[group***Disabling automatic garbage collection
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8339700Z [command***/usr/bin/git config --local gc.auto 0
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8378173Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8381224Z ##[group***Setting up auth
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8386247Z [command***/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-reply	UNKNOWN STEP	2026-07-20T20:34:08.8429228Z [command***/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-reply	UNKNOWN STEP	2026-07-20T20:34:08.9257387Z [command***/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-reply	UNKNOWN STEP	2026-07-20T20:34:08.9297073Z [command***/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-reply	UNKNOWN STEP	2026-07-20T20:34:08.9536070Z [command***/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-reply	UNKNOWN STEP	2026-07-20T20:34:08.9575771Z [command***/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-reply	UNKNOWN STEP	2026-07-20T20:34:08.9814449Z [command***/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-reply	UNKNOWN STEP	2026-07-20T20:34:08.9856482Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:08.9860029Z ##[group***Fetching the repository
-reply	UNKNOWN STEP	2026-07-20T20:34:08.9867357Z [command***/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0f6e9ab390a2321f019c7220b0d77cf367f579ef:refs/remotes/origin/main
-reply	UNKNOWN STEP	2026-07-20T20:34:09.5925113Z From https://github.com/juanjosezarzar/Agente_de_Jota
-reply	UNKNOWN STEP	2026-07-20T20:34:09.5929203Z  * [new ref***         0f6e9ab390a2321f019c7220b0d77cf367f579ef -> origin/main
-reply	UNKNOWN STEP	2026-07-20T20:34:09.5967735Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:09.5970153Z ##[group***Determining the checkout info
-reply	UNKNOWN STEP	2026-07-20T20:34:09.5972857Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:09.5996663Z [command***/usr/bin/git sparse-checkout disable
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6059419Z [command***/usr/bin/git config --local --unset-all extensions.worktreeConfig
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6095910Z ##[group***Checking out the ref
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6101005Z [command***/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6194070Z Switched to a new branch 'main'
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6196994Z branch 'main' set up to track 'origin/main'.
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6207431Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6263475Z [command***/usr/bin/git log -1 --format=%H
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6293002Z 0f6e9ab390a2321f019c7220b0d77cf367f579ef
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6699654Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6704237Z ##[group***Run actions/setup-python@v5
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6705501Z with:
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6706592Z   python-version: 3.9
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6707733Z   check-latest: false
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6713389Z   token: ***
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6714535Z   update-environment: true
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6715752Z   allow-prereleases: false
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6716926Z   freethreaded: false
-reply	UNKNOWN STEP	2026-07-20T20:34:09.6718363Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:09.8143215Z ##[group***Installed versions
-reply	UNKNOWN STEP	2026-07-20T20:34:09.8690779Z Version 3.9 was not found in the local cache
-reply	UNKNOWN STEP	2026-07-20T20:34:09.8808316Z (node:2276) [DEP0040*** DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-reply	UNKNOWN STEP	2026-07-20T20:34:09.8813856Z (Use `node --trace-deprecation ...` to show where the warning was created)
-reply	UNKNOWN STEP	2026-07-20T20:34:10.8053534Z Version 3.9 is available for downloading
-reply	UNKNOWN STEP	2026-07-20T20:34:10.8055368Z Download from "https://github.com/actions/python-versions/releases/download/3.9.25-19039189640/python-3.9.25-linux-24.04-x64.tar.gz"
-reply	UNKNOWN STEP	2026-07-20T20:34:11.5488893Z Extract downloaded archive
-reply	UNKNOWN STEP	2026-07-20T20:34:11.5665103Z [command***/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/a62fdaa3-b147-4b68-a9c5-eeb04b616f60 -f /home/runner/work/_temp/74e09476-d532-47a1-b85e-c4b9969aa3ba
-reply	UNKNOWN STEP	2026-07-20T20:34:13.1183343Z Execute installation script
-reply	UNKNOWN STEP	2026-07-20T20:34:13.1302974Z Check if Python hostedtoolcache folder exist...
-reply	UNKNOWN STEP	2026-07-20T20:34:13.1304477Z Create Python 3.9.25 folder
-reply	UNKNOWN STEP	2026-07-20T20:34:13.1318352Z Copy Python binaries to hostedtoolcache folder
-reply	UNKNOWN STEP	2026-07-20T20:34:13.6109348Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
-reply	UNKNOWN STEP	2026-07-20T20:34:13.6155703Z Upgrading pip...
-reply	UNKNOWN STEP	2026-07-20T20:34:16.3093364Z Looking in links: /tmp/tmphopx00s1
-reply	UNKNOWN STEP	2026-07-20T20:34:16.3097086Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (79.0.1)
-reply	UNKNOWN STEP	2026-07-20T20:34:16.3103974Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (23.0.1)
-reply	UNKNOWN STEP	2026-07-20T20:34:18.1428120Z Collecting pip
-reply	UNKNOWN STEP	2026-07-20T20:34:18.2968871Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
-reply	UNKNOWN STEP	2026-07-20T20:34:18.6599953Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 5.0 MB/s eta 0:00:00
-reply	UNKNOWN STEP	2026-07-20T20:34:18.6601113Z 
-reply	UNKNOWN STEP	2026-07-20T20:34:18.7249958Z Installing collected packages: pip
-reply	UNKNOWN STEP	2026-07-20T20:34:18.7251090Z Attempting uninstall: pip
-reply	UNKNOWN STEP	2026-07-20T20:34:18.7257684Z Found existing installation: pip 23.0.1
-reply	UNKNOWN STEP	2026-07-20T20:34:18.9153661Z Uninstalling pip-23.0.1:
-reply	UNKNOWN STEP	2026-07-20T20:34:18.9233093Z Successfully uninstalled pip-23.0.1
-reply	UNKNOWN STEP	2026-07-20T20:34:19.8385138Z Successfully installed pip-26.0.1
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9016714Z Create complete file
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9095064Z Successfully set up CPython (3.9.25)
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9096910Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9312718Z ##[group***Run pip install google-genai instagrapi
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9313496Z ^[[36;1mpip install google-genai instagrapi^[[0m
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9400097Z shell: /usr/bin/bash -e ***0***
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9400704Z env:
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9401326Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9402179Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9403007Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9403782Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9404543Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9405300Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
-reply	UNKNOWN STEP	2026-07-20T20:34:19.9406285Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:20.8346735Z Collecting google-genai
-reply	UNKNOWN STEP	2026-07-20T20:34:20.9802185Z   Downloading google_genai-1.47.0-py3-none-any.whl.metadata (46 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.0988116Z Collecting instagrapi
-reply	UNKNOWN STEP	2026-07-20T20:34:21.1429933Z   Downloading instagrapi-2.4.5-py3-none-any.whl.metadata (10 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.1688621Z Collecting anyio<5.0.0,>=4.8.0 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.2110500Z   Downloading anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.2565214Z Collecting google-auth<3.0.0,>=2.14.1 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.2996516Z   Downloading google_auth-2.50.0-py3-none-any.whl.metadata (6.2 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.3262573Z Collecting httpx<1.0.0,>=0.28.1 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.3686946Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.5140088Z Collecting pydantic<3.0.0,>=2.9.0 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.5563404Z   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.6291127Z Collecting requests<3.0.0,>=2.28.1 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.6716112Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.6923347Z Collecting tenacity<9.2.0,>=8.2.3 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.7344628Z   Downloading tenacity-9.1.2-py3-none-any.whl.metadata (1.2 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.8593850Z Collecting websockets<15.1.0,>=13.0.0 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.9030577Z   Downloading websockets-15.0.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.9244259Z Collecting typing-extensions<5.0.0,>=4.11.0 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.9666145Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:21.9818669Z Collecting exceptiongroup>=1.0.2 (from anyio<5.0.0,>=4.8.0->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.0240423Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.0420443Z Collecting idna>=2.8 (from anyio<5.0.0,>=4.8.0->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.0841683Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.1102445Z Collecting pyasn1-modules>=0.2.1 (from google-auth<3.0.0,>=2.14.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.1524265Z   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.4232243Z Collecting cryptography>=38.0.3 (from google-auth<3.0.0,>=2.14.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.4654885Z   Downloading cryptography-49.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.4903666Z Collecting certifi (from httpx<1.0.0,>=0.28.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.5322374Z   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.5531507Z Collecting httpcore==1.* (from httpx<1.0.0,>=0.28.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.5950225Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.6122509Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0,>=0.28.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.6543595Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.6669177Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.9.0->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:22.7089354Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:23.6707169Z Collecting pydantic-core==2.46.4 (from pydantic<3.0.0,>=2.9.0->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:23.7139799Z   Downloading pydantic_core-2.46.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:23.7278994Z Collecting typing-inspection>=0.4.2 (from pydantic<3.0.0,>=2.9.0->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:23.7700061Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:23.9047366Z Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.28.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:23.9471046Z   Downloading charset_normalizer-3.4.9-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:23.9834676Z Collecting urllib3<3,>=1.21.1 (from requests<3.0.0,>=2.28.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:24.0257321Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:24.0513570Z Collecting PySocks==1.7.1 (from instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:24.0933101Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:24.1066683Z Collecting pydantic<3.0.0,>=2.9.0 (from google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:24.1502048Z   Downloading pydantic-2.13.3-py3-none-any.whl.metadata (108 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:24.1830927Z Collecting moviepy==1.0.3 (from instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:24.2255308Z   Downloading moviepy-1.0.3.tar.gz (388 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:24.3388765Z   Installing build dependencies: started
-reply	UNKNOWN STEP	2026-07-20T20:34:25.8571771Z   Installing build dependencies: finished with status 'done'
-reply	UNKNOWN STEP	2026-07-20T20:34:25.8583533Z   Getting requirements to build wheel: started
-reply	UNKNOWN STEP	2026-07-20T20:34:26.2479518Z   Getting requirements to build wheel: finished with status 'done'
-reply	UNKNOWN STEP	2026-07-20T20:34:26.2494880Z   Preparing metadata (pyproject.toml): started
-reply	UNKNOWN STEP	2026-07-20T20:34:26.4599335Z   Preparing metadata (pyproject.toml): finished with status 'done'
-reply	UNKNOWN STEP	2026-07-20T20:34:26.5606520Z Collecting pycryptodomex==3.23.0 (from instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.6034110Z   Downloading pycryptodomex-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.4 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.6126614Z Collecting pydantic-core==2.46.3 (from pydantic<3.0.0,>=2.9.0->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.6563467Z   Downloading pydantic_core-2.46.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.6741103Z Collecting decorator<5.0,>=4.0.2 (from moviepy==1.0.3->instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.7169116Z   Downloading decorator-4.4.2-py2.py3-none-any.whl.metadata (4.2 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.7452858Z Collecting imageio<3.0,>=2.5 (from moviepy==1.0.3->instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.7897533Z   Downloading imageio-2.37.2-py3-none-any.whl.metadata (9.7 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.8223296Z Collecting imageio_ffmpeg>=0.2.0 (from moviepy==1.0.3->instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.8649917Z   Downloading imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.9076073Z Collecting tqdm<5.0,>=4.11.2 (from moviepy==1.0.3->instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:26.9499321Z   Downloading tqdm-4.69.0-py3-none-any.whl.metadata (57 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:27.2941058Z Collecting numpy>=1.17.3 (from moviepy==1.0.3->instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:27.3363941Z   Downloading numpy-2.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:27.3557705Z Collecting proglog<=1.0.0 (from moviepy==1.0.3->instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:27.3994804Z   Downloading proglog-0.1.12-py3-none-any.whl.metadata (794 bytes)
-reply	UNKNOWN STEP	2026-07-20T20:34:27.6214584Z Collecting pillow>=8.3.2 (from imageio<3.0,>=2.5->moviepy==1.0.3->instagrapi)
-reply	UNKNOWN STEP	2026-07-20T20:34:27.6656431Z   Downloading pillow-11.3.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:27.9229089Z Collecting cffi>=2.0.0 (from cryptography>=38.0.3->google-auth<3.0.0,>=2.14.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:27.9656789Z   Downloading cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.0180359Z Collecting pycparser (from cffi>=2.0.0->cryptography>=38.0.3->google-auth<3.0.0,>=2.14.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.0606638Z   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.0921618Z Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth<3.0.0,>=2.14.1->google-genai)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.1346545Z   Downloading pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.1875285Z Downloading google_genai-1.47.0-py3-none-any.whl (241 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.2422019Z Downloading anyio-4.12.1-py3-none-any.whl (113 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.2888721Z Downloading google_auth-2.50.0-py3-none-any.whl (246 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.3427157Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.3889514Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.4349458Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.4800243Z Downloading charset_normalizer-3.4.9-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.5314976Z Downloading idna-3.18-py3-none-any.whl (65 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.5763170Z Downloading tenacity-9.1.2-py3-none-any.whl (28 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.6209259Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.6655253Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.7165591Z Downloading websockets-15.0.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.7676143Z Downloading instagrapi-2.4.5-py3-none-any.whl (135 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.8158212Z Downloading pydantic-2.13.3-py3-none-any.whl (471 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.8780706Z Downloading pycryptodomex-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
-reply	UNKNOWN STEP	2026-07-20T20:34:28.9739240Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 22.3 MB/s  0:00:00
-reply	UNKNOWN STEP	2026-07-20T20:34:29.0170747Z Downloading pydantic_core-2.46.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.0655981Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 40.3 MB/s  0:00:00
-reply	UNKNOWN STEP	2026-07-20T20:34:29.1077656Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.1520095Z Downloading decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.1965388Z Downloading imageio-2.37.2-py3-none-any.whl (317 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.2424383Z Downloading proglog-0.1.12-py3-none-any.whl (6.3 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.2872451Z Downloading tqdm-4.69.0-py3-none-any.whl (676 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.2949841Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 676.7/676.7 kB 117.0 MB/s  0:00:00
-reply	UNKNOWN STEP	2026-07-20T20:34:29.3373293Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.3825238Z Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.4275117Z Downloading cryptography-49.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.4792574Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 91.9 MB/s  0:00:00
-reply	UNKNOWN STEP	2026-07-20T20:34:29.5218380Z Downloading cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.5673031Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.6116289Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.6564789Z Downloading imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl (29.5 MB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.8404509Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.5/29.5 MB 161.7 MB/s  0:00:00
-reply	UNKNOWN STEP	2026-07-20T20:34:29.8838752Z Downloading numpy-2.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.5 MB)
-reply	UNKNOWN STEP	2026-07-20T20:34:29.9698322Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.5/19.5 MB 234.5 MB/s  0:00:00
-reply	UNKNOWN STEP	2026-07-20T20:34:30.0175939Z Downloading pillow-11.3.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
-reply	UNKNOWN STEP	2026-07-20T20:34:30.0552379Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 185.5 MB/s  0:00:00
-reply	UNKNOWN STEP	2026-07-20T20:34:30.0978991Z Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:30.1435925Z Downloading pyasn1-0.6.4-py3-none-any.whl (84 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:30.1887275Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:30.2340263Z Downloading pycparser-2.23-py3-none-any.whl (118 kB)
-reply	UNKNOWN STEP	2026-07-20T20:34:30.3254145Z Building wheels for collected packages: moviepy
-reply	UNKNOWN STEP	2026-07-20T20:34:30.3265896Z   Building wheel for moviepy (pyproject.toml): started
-reply	UNKNOWN STEP	2026-07-20T20:34:30.6384935Z   Building wheel for moviepy (pyproject.toml): finished with status 'done'
-reply	UNKNOWN STEP	2026-07-20T20:34:30.6395032Z   Created wheel for moviepy: filename=moviepy-1.0.3-py3-none-any.whl size=110796 sha256=7631e88d2db3c3e4b802f7e7deeaf29565d83b4b2859705f1c8b287323d1b060
-reply	UNKNOWN STEP	2026-07-20T20:34:30.6397482Z   Stored in directory: /home/runner/.cache/pip/wheels/29/15/e4/4f790bec6acd51a00b67e8ee1394f0bc6e0135c315f8ff399a
-reply	UNKNOWN STEP	2026-07-20T20:34:30.6428408Z Successfully built moviepy
-reply	UNKNOWN STEP	2026-07-20T20:34:30.7426414Z Installing collected packages: websockets, urllib3, typing-extensions, tqdm, tenacity, PySocks, pycryptodomex, pycparser, pyasn1, pillow, numpy, imageio_ffmpeg, idna, h11, decorator, charset_normalizer, certifi, annotated-types, typing-inspection, requests, pydantic-core, pyasn1-modules, proglog, imageio, httpcore, exceptiongroup, cffi, pydantic, moviepy, cryptography, anyio, instagrapi, httpx, google-auth, google-genai
-reply	UNKNOWN STEP	2026-07-20T20:34:35.8207052Z 
-reply	UNKNOWN STEP	2026-07-20T20:34:35.8272720Z Successfully installed PySocks-1.7.1 annotated-types-0.7.0 anyio-4.12.1 certifi-2026.6.17 cffi-2.0.0 charset_normalizer-3.4.9 cryptography-49.0.0 decorator-4.4.2 exceptiongroup-1.3.1 google-auth-2.50.0 google-genai-1.47.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.18 imageio-2.37.2 imageio_ffmpeg-0.6.0 instagrapi-2.4.5 moviepy-1.0.3 numpy-2.0.2 pillow-11.3.0 proglog-0.1.12 pyasn1-0.6.4 pyasn1-modules-0.4.2 pycparser-2.23 pycryptodomex-3.23.0 pydantic-2.13.3 pydantic-core-2.46.3 requests-2.32.5 tenacity-9.1.2 tqdm-4.69.0 typing-extensions-4.16.0 typing-inspection-0.4.2 urllib3-2.6.3 websockets-15.0.1
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5256806Z ##[group***Run if [ -n "$SESSION_SETTINGS" ***; then
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5257578Z ^[[36;1mif [ -n "$SESSION_SETTINGS" ***; then^[[0m
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5258945Z ^[[36;1m  echo "$SESSION_SETTINGS" > session.json^[[0m
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5259528Z ^[[36;1mfi^[[0m
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5322781Z shell: /usr/bin/bash -e ***0***
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5323369Z env:
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5323969Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5324803Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5325628Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5326394Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5327153Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5328286Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5335731Z   SESSION_SETTINGS: ***
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5336222Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5479857Z ##[group***Run python -u agent.py --reply-dms
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5480569Z ^[[36;1mpython -u agent.py --reply-dms^[[0m
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5544199Z shell: /usr/bin/bash -e ***0***
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5544808Z env:
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5545427Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5546270Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5547072Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5548014Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5548795Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5549569Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5550310Z   INSTAGRAM_USERNAME: ***
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5550896Z   INSTAGRAM_PASSWORD: ***
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5551552Z   GEMINI_API_KEY: ***
-reply	UNKNOWN STEP	2026-07-20T20:34:36.5552078Z ##[endgroup***
-reply	UNKNOWN STEP	2026-07-20T20:34:37.1970874Z /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-reply	UNKNOWN STEP	2026-07-20T20:34:37.1974240Z   warnings.warn(eol_message.format("3.9"), FutureWarning)
-reply	UNKNOWN STEP	2026-07-20T20:34:37.2643700Z /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
-reply	UNKNOWN STEP	2026-07-20T20:34:37.2647585Z   warnings.warn(eol_message.format("3.9"), FutureWarning)
-reply	UNKNOWN STEP	2026-07-20T20:34:37.5191189Z 
-reply	UNKNOWN STEP	2026-07-20T20:34:37.5192326Z ^[[1m^[[32m=== Tarea: Responder DMs de Clientes ===^[[0m
-reply	UNKNOWN STEP	2026-07-20T20:34:37.5202467Z [Instagram*** Buscando archivo de sesión en: /home/runner/work/Agente_de_Jota/Agente_de_Jota/session.json
-reply	UNKNOWN STEP	2026-07-20T20:34:37.5204480Z [Instagram*** Archivo session.json encontrado (Tamaño: 1892 bytes). Cargando...
-reply	UNKNOWN STEP	2026-07-20T20:34:37.5209288Z [Instagram*** Configuración cargada. Validando sesión para user_id: 64201218575...
-reply	UNKNOWN STEP	2026-07-20T20:34:39.2494283Z [Instagram*** Sesión cargada desde cache con éxito para @*** (sin necesidad de login).
-reply	UNKNOWN STEP	2026-07-20T20:34:44.3321838Z Se encontraron 20 chats no leídos.
-reply	UNKNOWN STEP	2026-07-20T20:34:44.3322964Z Procesando mensaje de Thread 340282366841710301244259387264370582283: 'Hola'
-reply	UNKNOWN STEP	2026-07-20T20:34:44.3324331Z [Gemini*** Intentando generar contenido con el modelo gemini-3.5-flash...
-reply	UNKNOWN STEP	2026-07-20T20:34:46.3900740Z [Gemini*** Error con el modelo gemini-3.5-flash: 503 UNAVAILABLE. ***'error': ***'code': *** 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'***. Intentando el siguiente fallback...
-reply	UNKNOWN STEP	2026-07-20T20:34:46.3904057Z [Gemini*** Intentando generar contenido con el modelo gemini-3.1-flash-lite...
-reply	UNKNOWN STEP	2026-07-20T20:34:47.3810256Z [Gemini*** Éxito con el modelo gemini-3.1-flash-lite.
-reply	UNKNOWN STEP	2026-07-20T20:34:47.3812790Z Warning: there are non-text parts in the response: ['thought_signature'***, returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-reply	UNKNOWN STEP	2026-07-20T20:34:47.3814783Z Enviando respuesta a Thread 340282366841710301244259387264370582283...
-reply	UNKNOWN STEP	2026-07-20T20:34:50.1090369Z ^[[31mError al responder DMs: login_required^[[0m
-reply	UNKNOWN STEP	2026-07-20T20:34:50.2280191Z ##[error***Process completed with exit code 1.
-reply	UNKNOWN STEP	2026-07-20T20:34:50.2468340Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
-reply	UNKNOWN STEP	2026-07-20T20:34:50.2469961Z Post job cleanup.
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3419110Z [command***/usr/bin/git version
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3478815Z git version 2.54.0
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3501543Z Temporarily overriding HOME='/home/runner/work/_temp/043f6239-80e5-45c1-b8fe-73fae66aa3d6' before making global git config changes
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3503412Z Adding repository directory to the temporary git global config as a safe directory
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3505194Z [command***/usr/bin/git config --global --add safe.directory /home/runner/work/Agente_de_Jota/Agente_de_Jota
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3549221Z [command***/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3615831Z [command***/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3887280Z [command***/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3919406Z http.https://github.com/.extraheader
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3932662Z [command***/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-reply	UNKNOWN STEP	2026-07-20T20:34:50.3974983Z [command***/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-reply	UNKNOWN STEP	2026-07-20T20:34:50.4250228Z [command***/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-reply	UNKNOWN STEP	2026-07-20T20:34:50.4300131Z [command***/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-reply	UNKNOWN STEP	2026-07-20T20:34:50.4771515Z Cleaning up orphan processes
-reply	UNKNOWN STEP	2026-07-20T20:34:50.5214815Z ##[warning***Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+reply	UNKNOWN STEP	﻿2026-07-21T18:01:12.1234070Z Current runner version: '2.336.0'
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1265823Z ##[group***Runner Image Provisioner
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1268231Z Hosted Compute Agent
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1269750Z Version: 20260707.563
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1271461Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1273116Z Build Date: 2026-07-07T19:33:50Z
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1274772Z Worker ID: ***3b3c87d6-f515-4b61-bc86-6d7904958082***
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1276513Z Azure Region: eastus
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1278220Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1281043Z ##[group***Operating System
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1282685Z Ubuntu
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1284099Z 24.04.4
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1285532Z LTS
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1287215Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1288658Z ##[group***Runner Image
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1290194Z Image: ubuntu-24.04
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1291646Z Version: 20260714.240.1
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1293882Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260714.240/images/ubuntu/Ubuntu2404-Readme.md
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1296521Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260714.240
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1298761Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1301471Z ##[group***GITHUB_TOKEN Permissions
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1304550Z Contents: read
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1306029Z Metadata: read
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1307931Z Packages: read
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1309542Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1312562Z Secret source: Actions
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1315165Z Prepare workflow directory
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1660216Z Prepare all required actions
+reply	UNKNOWN STEP	2026-07-21T18:01:12.1704075Z Getting action download info
+reply	UNKNOWN STEP	2026-07-21T18:01:12.5162650Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+reply	UNKNOWN STEP	2026-07-21T18:01:12.7235062Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9025366Z Complete job name: reply
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9967276Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9976664Z ##[group***Run actions/checkout@v4
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9978446Z with:
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9979639Z   repository: juanjosezarzar/Agente_de_Jota
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9984710Z   token: ***
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9985797Z   ssh-strict: true
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9987366Z   ssh-user: git
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9988569Z   persist-credentials: true
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9989761Z   clean: true
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9990922Z   sparse-checkout-cone-mode: true
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9992159Z   fetch-depth: 1
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9993286Z   fetch-tags: false
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9994437Z   show-progress: true
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9995575Z   lfs: false
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9996713Z   submodules: false
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9998099Z   set-safe-directory: true
+reply	UNKNOWN STEP	2026-07-21T18:01:12.9999365Z   allow-unsafe-pr-checkout: false
+reply	UNKNOWN STEP	2026-07-21T18:01:13.0001025Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1057191Z Syncing repository: juanjosezarzar/Agente_de_Jota
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1061761Z ##[group***Getting Git version info
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1064459Z Working directory is '/home/runner/work/Agente_de_Jota/Agente_de_Jota'
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1067167Z [command***/usr/bin/git version
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1133953Z git version 2.54.0
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1218436Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1234335Z Temporarily overriding HOME='/home/runner/work/_temp/f515697f-d070-4258-9dfa-dcbe1dbdaed9' before making global git config changes
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1239254Z Adding repository directory to the temporary git global config as a safe directory
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1243647Z [command***/usr/bin/git config --global --add safe.directory /home/runner/work/Agente_de_Jota/Agente_de_Jota
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1269867Z Deleting the contents of '/home/runner/work/Agente_de_Jota/Agente_de_Jota'
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1275717Z ##[group***Initializing the repository
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1280901Z [command***/usr/bin/git init /home/runner/work/Agente_de_Jota/Agente_de_Jota
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1421964Z hint: Using 'master' as the name for the initial branch. This default branch name
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1427514Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1432129Z hint: to use in all of your new repositories, which will suppress this warning,
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1436274Z hint: call:
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1439936Z hint:
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1442416Z hint: 	git config --global init.defaultBranch <name>
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1445314Z hint:
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1448544Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1452412Z hint: 'development'. The just-created branch can be renamed via this command:
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1455583Z hint:
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1458560Z hint: 	git branch -m <name>
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1461175Z hint:
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1464131Z hint: Disable this message with "git config set advice.defaultBranchName false"
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1468751Z Initialized empty Git repository in /home/runner/work/Agente_de_Jota/Agente_de_Jota/.git/
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1476314Z [command***/usr/bin/git remote add origin https://github.com/juanjosezarzar/Agente_de_Jota
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1519588Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1523706Z ##[group***Disabling automatic garbage collection
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1526641Z [command***/usr/bin/git config --local gc.auto 0
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1571128Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1575025Z ##[group***Setting up auth
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1578747Z [command***/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+reply	UNKNOWN STEP	2026-07-21T18:01:13.1633287Z [command***/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+reply	UNKNOWN STEP	2026-07-21T18:01:13.2085847Z [command***/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+reply	UNKNOWN STEP	2026-07-21T18:01:13.2139383Z [command***/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+reply	UNKNOWN STEP	2026-07-21T18:01:13.2365365Z [command***/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+reply	UNKNOWN STEP	2026-07-21T18:01:13.2405777Z [command***/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+reply	UNKNOWN STEP	2026-07-21T18:01:13.2630592Z [command***/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.2670302Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.2679710Z ##[group***Fetching the repository
+reply	UNKNOWN STEP	2026-07-21T18:01:13.2682161Z [command***/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +295d37e4bf6766b07a3c7fd81eadc7d45a93e332:refs/remotes/origin/main
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4811414Z From https://github.com/juanjosezarzar/Agente_de_Jota
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4814752Z  * [new ref***         295d37e4bf6766b07a3c7fd81eadc7d45a93e332 -> origin/main
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4849564Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4852167Z ##[group***Determining the checkout info
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4854268Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4858232Z [command***/usr/bin/git sparse-checkout disable
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4906101Z [command***/usr/bin/git config --local --unset-all extensions.worktreeConfig
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4939870Z ##[group***Checking out the ref
+reply	UNKNOWN STEP	2026-07-21T18:01:13.4942860Z [command***/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5025026Z Switched to a new branch 'main'
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5052493Z branch 'main' set up to track 'origin/main'.
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5059863Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5088180Z [command***/usr/bin/git log -1 --format=%H
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5115123Z 295d37e4bf6766b07a3c7fd81eadc7d45a93e332
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5462387Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5466374Z ##[group***Run actions/setup-python@v5
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5467974Z with:
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5469073Z   python-version: 3.9
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5470231Z   check-latest: false
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5475204Z   token: ***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5476328Z   update-environment: true
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5477833Z   allow-prereleases: false
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5479027Z   freethreaded: false
+reply	UNKNOWN STEP	2026-07-21T18:01:13.5480195Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:13.6808627Z ##[group***Installed versions
+reply	UNKNOWN STEP	2026-07-21T18:01:13.6903756Z Version 3.9 was not found in the local cache
+reply	UNKNOWN STEP	2026-07-21T18:01:13.7075260Z (node:2172) [DEP0040*** DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+reply	UNKNOWN STEP	2026-07-21T18:01:13.7078326Z (Use `node --trace-deprecation ...` to show where the warning was created)
+reply	UNKNOWN STEP	2026-07-21T18:01:14.1511404Z Version 3.9 is available for downloading
+reply	UNKNOWN STEP	2026-07-21T18:01:14.1515864Z Download from "https://github.com/actions/python-versions/releases/download/3.9.25-19039189640/python-3.9.25-linux-24.04-x64.tar.gz"
+reply	UNKNOWN STEP	2026-07-21T18:01:14.6770772Z Extract downloaded archive
+reply	UNKNOWN STEP	2026-07-21T18:01:14.6915830Z [command***/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/a744a901-a968-43ab-82fb-bb04c108d1dd -f /home/runner/work/_temp/72d99ee2-d7e9-4100-a356-7c5eabbfc1a5
+reply	UNKNOWN STEP	2026-07-21T18:01:16.1455355Z Execute installation script
+reply	UNKNOWN STEP	2026-07-21T18:01:16.1566446Z Check if Python hostedtoolcache folder exist...
+reply	UNKNOWN STEP	2026-07-21T18:01:16.1568084Z Create Python 3.9.25 folder
+reply	UNKNOWN STEP	2026-07-21T18:01:16.1584730Z Copy Python binaries to hostedtoolcache folder
+reply	UNKNOWN STEP	2026-07-21T18:01:16.6159272Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+reply	UNKNOWN STEP	2026-07-21T18:01:16.6206721Z Upgrading pip...
+reply	UNKNOWN STEP	2026-07-21T18:01:18.7506590Z Looking in links: /tmp/tmpdlugwotu
+reply	UNKNOWN STEP	2026-07-21T18:01:18.7511211Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (79.0.1)
+reply	UNKNOWN STEP	2026-07-21T18:01:18.7516511Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (23.0.1)
+reply	UNKNOWN STEP	2026-07-21T18:01:19.9258062Z Collecting pip
+reply	UNKNOWN STEP	2026-07-21T18:01:19.9593551Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+reply	UNKNOWN STEP	2026-07-21T18:01:19.9989705Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 48.5 MB/s eta 0:00:00
+reply	UNKNOWN STEP	2026-07-21T18:01:19.9990704Z 
+reply	UNKNOWN STEP	2026-07-21T18:01:20.0590623Z Installing collected packages: pip
+reply	UNKNOWN STEP	2026-07-21T18:01:20.0598850Z Attempting uninstall: pip
+reply	UNKNOWN STEP	2026-07-21T18:01:20.0628216Z     Found existing installation: pip 23.0.1
+reply	UNKNOWN STEP	2026-07-21T18:01:20.2412607Z Uninstalling pip-23.0.1:
+reply	UNKNOWN STEP	2026-07-21T18:01:20.2484474Z Successfully uninstalled pip-23.0.1
+reply	UNKNOWN STEP	2026-07-21T18:01:21.0653260Z Successfully installed pip-26.0.1
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1161873Z Create complete file
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1211634Z Successfully set up CPython (3.9.25)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1213507Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1430644Z ##[group***Run pip install google-genai instagrapi
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1431411Z ^[[36;1mpip install google-genai instagrapi^[[0m
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1517573Z shell: /usr/bin/bash -e ***0***
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1518151Z env:
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1518747Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1519540Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1520296Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1521003Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1521707Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1522416Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+reply	UNKNOWN STEP	2026-07-21T18:01:21.1523304Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:21.5223562Z Collecting google-genai
+reply	UNKNOWN STEP	2026-07-21T18:01:21.5691035Z   Downloading google_genai-1.47.0-py3-none-any.whl.metadata (46 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.6489787Z Collecting instagrapi
+reply	UNKNOWN STEP	2026-07-21T18:01:21.6555719Z   Downloading instagrapi-2.4.5-py3-none-any.whl.metadata (10 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.6795251Z Collecting anyio<5.0.0,>=4.8.0 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.6839292Z   Downloading anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.7267577Z Collecting google-auth<3.0.0,>=2.14.1 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.7320285Z   Downloading google_auth-2.50.0-py3-none-any.whl.metadata (6.2 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.7572902Z Collecting httpx<1.0.0,>=0.28.1 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.7617088Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.8991044Z Collecting pydantic<3.0.0,>=2.9.0 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.9040488Z   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.9360317Z Collecting requests<3.0.0,>=2.28.1 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.9406044Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.9600884Z Collecting tenacity<9.2.0,>=8.2.3 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:21.9645483Z   Downloading tenacity-9.1.2-py3-none-any.whl.metadata (1.2 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.0835472Z Collecting websockets<15.1.0,>=13.0.0 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.0887723Z   Downloading websockets-15.0.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.1100091Z Collecting typing-extensions<5.0.0,>=4.11.0 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.1148087Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.1326249Z Collecting exceptiongroup>=1.0.2 (from anyio<5.0.0,>=4.8.0->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.1375409Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.1537121Z Collecting idna>=2.8 (from anyio<5.0.0,>=4.8.0->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.1581332Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.1847784Z Collecting pyasn1-modules>=0.2.1 (from google-auth<3.0.0,>=2.14.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.1897679Z   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.4392689Z Collecting cryptography>=38.0.3 (from google-auth<3.0.0,>=2.14.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.4448660Z   Downloading cryptography-49.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.4699620Z Collecting certifi (from httpx<1.0.0,>=0.28.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.4747453Z   Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.4944746Z Collecting httpcore==1.* (from httpx<1.0.0,>=0.28.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.4994740Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.5133745Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0,>=0.28.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.5187950Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.5307603Z Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.9.0->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:22.5350944Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.4384621Z Collecting pydantic-core==2.46.4 (from pydantic<3.0.0,>=2.9.0->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.4434823Z   Downloading pydantic_core-2.46.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.4585529Z Collecting typing-inspection>=0.4.2 (from pydantic<3.0.0,>=2.9.0->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.4630047Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.5938836Z Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.28.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.5988810Z   Downloading charset_normalizer-3.4.9-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.6331546Z Collecting urllib3<3,>=1.21.1 (from requests<3.0.0,>=2.28.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.6378950Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.6629100Z Collecting PySocks==1.7.1 (from instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.6674209Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.6757736Z Collecting pydantic<3.0.0,>=2.9.0 (from google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.6801630Z   Downloading pydantic-2.13.3-py3-none-any.whl.metadata (108 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.6995899Z Collecting moviepy==1.0.3 (from instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.7048213Z   Downloading moviepy-1.0.3.tar.gz (388 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:23.7739409Z   Installing build dependencies: started
+reply	UNKNOWN STEP	2026-07-21T18:01:24.5250598Z   Installing build dependencies: finished with status 'done'
+reply	UNKNOWN STEP	2026-07-21T18:01:24.5261595Z   Getting requirements to build wheel: started
+reply	UNKNOWN STEP	2026-07-21T18:01:24.9737352Z   Getting requirements to build wheel: finished with status 'done'
+reply	UNKNOWN STEP	2026-07-21T18:01:24.9751484Z   Preparing metadata (pyproject.toml): started
+reply	UNKNOWN STEP	2026-07-21T18:01:25.1730770Z   Preparing metadata (pyproject.toml): finished with status 'done'
+reply	UNKNOWN STEP	2026-07-21T18:01:25.2742515Z Collecting pycryptodomex==3.23.0 (from instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.2819413Z   Downloading pycryptodomex-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.4 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.2904185Z Collecting pydantic-core==2.46.3 (from pydantic<3.0.0,>=2.9.0->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.2981385Z   Downloading pydantic_core-2.46.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.3224118Z Collecting decorator<5.0,>=4.0.2 (from moviepy==1.0.3->instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.3273571Z   Downloading decorator-4.4.2-py2.py3-none-any.whl.metadata (4.2 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.3734320Z Collecting imageio<3.0,>=2.5 (from moviepy==1.0.3->instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.3805569Z   Downloading imageio-2.37.2-py3-none-any.whl.metadata (9.7 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.4135985Z Collecting imageio_ffmpeg>=0.2.0 (from moviepy==1.0.3->instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.4179558Z   Downloading imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.4583337Z Collecting tqdm<5.0,>=4.11.2 (from moviepy==1.0.3->instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.4631862Z   Downloading tqdm-4.69.0-py3-none-any.whl.metadata (57 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.7875737Z Collecting numpy>=1.17.3 (from moviepy==1.0.3->instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.7937430Z   Downloading numpy-2.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.8126556Z Collecting proglog<=1.0.0 (from moviepy==1.0.3->instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:25.8176113Z   Downloading proglog-0.1.12-py3-none-any.whl.metadata (794 bytes)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.0334776Z Collecting pillow>=8.3.2 (from imageio<3.0,>=2.5->moviepy==1.0.3->instagrapi)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.0386146Z   Downloading pillow-11.3.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.2432966Z Collecting cffi>=2.0.0 (from cryptography>=38.0.3->google-auth<3.0.0,>=2.14.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.2485617Z   Downloading cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.2641150Z Collecting pycparser (from cffi>=2.0.0->cryptography>=38.0.3->google-auth<3.0.0,>=2.14.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.2685613Z   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.2971847Z Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth<3.0.0,>=2.14.1->google-genai)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3016981Z   Downloading pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3136616Z Downloading google_genai-1.47.0-py3-none-any.whl (241 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3224664Z Downloading anyio-4.12.1-py3-none-any.whl (113 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3361364Z Downloading google_auth-2.50.0-py3-none-any.whl (246 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3431839Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3518888Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3661429Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3747135Z Downloading charset_normalizer-3.4.9-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3815056Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3885034Z Downloading tenacity-9.1.2-py3-none-any.whl (28 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.3948599Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4019677Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4089712Z Downloading websockets-15.0.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4212883Z Downloading instagrapi-2.4.5-py3-none-any.whl (135 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4320445Z Downloading pydantic-2.13.3-py3-none-any.whl (471 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4415050Z Downloading pycryptodomex-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4548798Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 195.9 MB/s  0:00:00
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4615263Z Downloading pydantic_core-2.46.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4724896Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 207.5 MB/s  0:00:00
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4770020Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4835546Z Downloading decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4898813Z Downloading imageio-2.37.2-py3-none-any.whl (317 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.4972666Z Downloading proglog-0.1.12-py3-none-any.whl (6.3 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5036828Z Downloading tqdm-4.69.0-py3-none-any.whl (676 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5118848Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 676.7/676.7 kB 127.8 MB/s  0:00:00
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5169881Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5247109Z Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5319362Z Downloading cryptography-49.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5532184Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 238.3 MB/s  0:00:00
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5583113Z Downloading cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5653414Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5719412Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.5793773Z Downloading imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl (29.5 MB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.6770542Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.5/29.5 MB 307.0 MB/s  0:00:00
+reply	UNKNOWN STEP	2026-07-21T18:01:26.6832301Z Downloading numpy-2.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.5 MB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.7604055Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.5/19.5 MB 262.5 MB/s  0:00:00
+reply	UNKNOWN STEP	2026-07-21T18:01:26.7727686Z Downloading pillow-11.3.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.7990108Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 271.8 MB/s  0:00:00
+reply	UNKNOWN STEP	2026-07-21T18:01:26.8045295Z Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.8114765Z Downloading pyasn1-0.6.4-py3-none-any.whl (84 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.8180404Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.8243954Z Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+reply	UNKNOWN STEP	2026-07-21T18:01:26.9110023Z Building wheels for collected packages: moviepy
+reply	UNKNOWN STEP	2026-07-21T18:01:26.9120212Z   Building wheel for moviepy (pyproject.toml): started
+reply	UNKNOWN STEP	2026-07-21T18:01:27.1995337Z   Building wheel for moviepy (pyproject.toml): finished with status 'done'
+reply	UNKNOWN STEP	2026-07-21T18:01:27.2004681Z   Created wheel for moviepy: filename=moviepy-1.0.3-py3-none-any.whl size=110796 sha256=212cdd5527b056fcacf77d46d7ca35031063de8a38bd512769574ae08e406e2d
+reply	UNKNOWN STEP	2026-07-21T18:01:27.2019856Z   Stored in directory: /home/runner/.cache/pip/wheels/29/15/e4/4f790bec6acd51a00b67e8ee1394f0bc6e0135c315f8ff399a
+reply	UNKNOWN STEP	2026-07-21T18:01:27.2037427Z Successfully built moviepy
+reply	UNKNOWN STEP	2026-07-21T18:01:27.2990130Z Installing collected packages: websockets, urllib3, typing-extensions, tqdm, tenacity, PySocks, pycryptodomex, pycparser, pyasn1, pillow, numpy, imageio_ffmpeg, idna, h11, decorator, charset_normalizer, certifi, annotated-types, typing-inspection, requests, pydantic-core, pyasn1-modules, proglog, imageio, httpcore, exceptiongroup, cffi, pydantic, moviepy, cryptography, anyio, instagrapi, httpx, google-auth, google-genai
+reply	UNKNOWN STEP	2026-07-21T18:01:33.4003535Z 
+reply	UNKNOWN STEP	2026-07-21T18:01:33.4066635Z Successfully installed PySocks-1.7.1 annotated-types-0.7.0 anyio-4.12.1 certifi-2026.6.17 cffi-2.0.0 charset_normalizer-3.4.9 cryptography-49.0.0 decorator-4.4.2 exceptiongroup-1.3.1 google-auth-2.50.0 google-genai-1.47.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.18 imageio-2.37.2 imageio_ffmpeg-0.6.0 instagrapi-2.4.5 moviepy-1.0.3 numpy-2.0.2 pillow-11.3.0 proglog-0.1.12 pyasn1-0.6.4 pyasn1-modules-0.4.2 pycparser-2.23 pycryptodomex-3.23.0 pydantic-2.13.3 pydantic-core-2.46.3 requests-2.32.5 tenacity-9.1.2 tqdm-4.69.0 typing-extensions-4.16.0 typing-inspection-0.4.2 urllib3-2.6.3 websockets-15.0.1
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9069016Z ##[group***Run if [ -n "$SESSION_SETTINGS" ***; then
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9069785Z ^[[36;1mif [ -n "$SESSION_SETTINGS" ***; then^[[0m
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9070454Z ^[[36;1m  echo "$SESSION_SETTINGS" > session.json^[[0m
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9071051Z ^[[36;1mfi^[[0m
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9129969Z shell: /usr/bin/bash -e ***0***
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9130532Z env:
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9131117Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9131898Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9132671Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9133386Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9134073Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9134763Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9142629Z   SESSION_SETTINGS: ***
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9143156Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9264982Z ##[group***Run python -u agent.py --reply-dms
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9265690Z ^[[36;1mpython -u agent.py --reply-dms^[[0m
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9319379Z shell: /usr/bin/bash -e ***0***
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9319945Z env:
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9320540Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9321333Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9322116Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9322817Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9323516Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9324213Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9324883Z   INSTAGRAM_USERNAME: ***
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9325436Z   INSTAGRAM_PASSWORD: ***
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9326056Z   GEMINI_API_KEY: ***
+reply	UNKNOWN STEP	2026-07-21T18:01:33.9326573Z ##[endgroup***
+reply	UNKNOWN STEP	2026-07-21T18:01:34.5395592Z /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+reply	UNKNOWN STEP	2026-07-21T18:01:34.5399259Z   warnings.warn(eol_message.format("3.9"), FutureWarning)
+reply	UNKNOWN STEP	2026-07-21T18:01:34.6020341Z /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+reply	UNKNOWN STEP	2026-07-21T18:01:34.6023907Z   warnings.warn(eol_message.format("3.9"), FutureWarning)
+reply	UNKNOWN STEP	2026-07-21T18:01:34.6682155Z [Patch*** Modificando video_url: HttpUrl en instagrapi.types a video_url: str para evitar errores de Pydantic...
+reply	UNKNOWN STEP	2026-07-21T18:01:34.8501131Z 
+reply	UNKNOWN STEP	2026-07-21T18:01:34.8501901Z ^[[1m^[[32m=== Tarea: Responder DMs de Clientes ===^[[0m
+reply	UNKNOWN STEP	2026-07-21T18:01:34.8510630Z [Instagram*** Buscando archivo de sesión en: /home/runner/work/Agente_de_Jota/Agente_de_Jota/session.json
+reply	UNKNOWN STEP	2026-07-21T18:01:34.8511938Z [Instagram*** Archivo session.json encontrado (Tamaño: 2186 bytes). Cargando...
+reply	UNKNOWN STEP	2026-07-21T18:01:34.8516225Z [Instagram*** Configuración cargada. Validando sesión para user_id: 64201218575...
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2127066Z [Instagram*** Sesión previa no válida o expirada. Detalles del error:
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2136615Z Traceback (most recent call last):
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2146356Z   File "/opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/instagrapi/mixins/private.py", line 386, in _send_private_request
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2148321Z     response.raise_for_status()
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2149908Z   File "/opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2151455Z     raise HTTPError(http_error_msg, response=self)
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2153602Z requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://i.instagram.com/api/v1/users/64201218575/info/?is_prefetch=false&entry_point=self_profile&from_module=self_profile&is_app_start=False
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2155305Z 
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2155921Z During handling of the above exception, another exception occurred:
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2156709Z 
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2157402Z Traceback (most recent call last):
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2158848Z   File "/home/runner/work/Agente_de_Jota/Agente_de_Jota/agent.py", line 159, in get_instagram_client
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2160271Z     info = cl.user_info_v1(cl.user_id)
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2161958Z   File "/opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/instagrapi/mixins/user.py", line *** in user_info_v1
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2163534Z     raise e
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2165377Z   File "/opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/instagrapi/mixins/user.py", line 423, in user_info_v1
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2167514Z     result = self.private_request(f"users/***user_id***/info/", params=params)
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2169458Z   File "/opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/instagrapi/mixins/private.py", line 579, in private_request
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2171058Z     raise e
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2172579Z   File "/opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/instagrapi/mixins/private.py", line 564, in private_request
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2174307Z     self._send_private_request(endpoint, **kwargs)
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2176116Z   File "/opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages/instagrapi/mixins/private.py", line 412, in _send_private_request
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2178115Z     raise LoginRequired(response=e.response, **last_json)
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2179348Z instagrapi.exceptions.LoginRequired: login_required
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2180563Z [Instagram*** Intentando login convencional...
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2181704Z [Instagram*** Iniciando login convencional...
+reply	UNKNOWN STEP	2026-07-21T18:01:36.2183153Z [Instagram*** Inicio de sesión convencional exitoso. Sesión guardada.
+reply	UNKNOWN STEP	2026-07-21T18:01:38.1209909Z ^[[31mError al responder DMs: login_required^[[0m
+reply	UNKNOWN STEP	2026-07-21T18:01:38.2179639Z ##[error***Process completed with exit code 1.
+reply	UNKNOWN STEP	2026-07-21T18:01:38.2358315Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+reply	UNKNOWN STEP	2026-07-21T18:01:38.2360140Z Post job cleanup.
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3226351Z [command***/usr/bin/git version
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3291455Z git version 2.54.0
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3316283Z Temporarily overriding HOME='/home/runner/work/_temp/dd1f9714-fe35-4bc2-9a4a-ee00c4ec3794' before making global git config changes
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3318704Z Adding repository directory to the temporary git global config as a safe directory
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3323614Z [command***/usr/bin/git config --global --add safe.directory /home/runner/work/Agente_de_Jota/Agente_de_Jota
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3366632Z [command***/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3406210Z [command***/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3695249Z [command***/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3724571Z http.https://github.com/.extraheader
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3745411Z [command***/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+reply	UNKNOWN STEP	2026-07-21T18:01:38.3787066Z [command***/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+reply	UNKNOWN STEP	2026-07-21T18:01:38.4040809Z [command***/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+reply	UNKNOWN STEP	2026-07-21T18:01:38.4098744Z [command***/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+reply	UNKNOWN STEP	2026-07-21T18:01:38.4499587Z Cleaning up orphan processes
+reply	UNKNOWN STEP	2026-07-21T18:01:38.4953813Z ##[warning***Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
