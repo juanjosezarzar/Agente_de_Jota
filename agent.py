@@ -164,6 +164,7 @@ def get_instagram_client(dry_run=False):
             print(f"[Instagram] Sesión previa no válida o expirada. Detalles del error:", flush=True)
             traceback.print_exc()
             print("[Instagram] Intentando login convencional...", flush=True)
+            cl = Client() # Reiniciar cliente para limpiar sesión cargada y evitar bug de no-op login
     else:
         print("[Instagram] Archivo session.json no encontrado. Se requiere login convencional.", flush=True)
             
