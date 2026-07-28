@@ -1,8 +1,8 @@
 name: Reporte Semanal de Metricas
 
 on:
-  schedule:
-    - cron: '0 23 * * 0' # Cada domingo a las 23:00 UTC
+  # schedule:
+  #   - cron: '0 23 * * 0' # Cada domingo a las 23:00 UTC
   workflow_dispatch:
 
 jobs:
